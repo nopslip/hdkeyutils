@@ -37,7 +37,7 @@ var ZcashTestnetPrefix = []byte{0x1d, 0x25}
 
 func EncodeZcashPubkey(k *btcec.PublicKey) string {
 	val := KeyHashSha256Ripe160(k)
-	return Base58Check(val, ZcashPrefix)
+	return Base58Check(val, ZcashTestnetPrefix)
 }
 
 func EncodeEthereumPubkey(k *btcec.PublicKey) string {
